@@ -10,4 +10,7 @@ abstract class ActivityBinderModule {
 
     @ContributesAndroidInjector(modules = [MainActivityModule::class])
     internal abstract fun contributeMainActivity(): MainActivity
+
+    //@ContributesAndroidInjector
+    //internal abstract fun contributeİkinciSayfa(): İkinciSayfa
 }

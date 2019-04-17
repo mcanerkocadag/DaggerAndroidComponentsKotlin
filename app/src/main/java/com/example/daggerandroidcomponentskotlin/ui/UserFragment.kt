@@ -71,7 +71,7 @@ public class UserFragment : Fragment() {
 
     companion object {
 
-        val UID_KEY = "uid"
+        const val UID_KEY = "uid"
     }
 }
 

@@ -3,6 +3,7 @@ package com.example.daggerandroidcomponentskotlin;
 import android.app.Activity
 import android.app.Application
 import com.example.daggerandroidcomponentskotlin.dagger.DaggerAppComponent
+import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -16,7 +17,6 @@ public class App : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         DaggerAppComponent.builder().application(this).build().inject(this)
-
     }
 
     override fun activityInjector(): AndroidInjector<Activity>? {

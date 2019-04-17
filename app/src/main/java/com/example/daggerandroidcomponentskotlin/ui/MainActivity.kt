@@ -1,5 +1,7 @@
 package com.example.daggerandroidcomponentskotlin.ui
 
+import android.arch.lifecycle.Observer
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -21,6 +23,25 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.showFragment(savedInstanceState)
+
+        //val request = OneTimeWorkRequest.Builder(AppWorker::class.java)
+        //    .build()
+        //val requestID = request.id
+
+        //WorkManager.getInstance()?.getStatusById(request.id)?.observe(this, Observer {
+        //    Log.i("AppWorker", "Work Status: " + it?.state!!.name + "\n")
+        //})
+        //WorkManager.getInstance()?.enqueue(request)
+        //Log.i("WorkManager", "RequestID: $requestID")
+        //Log.i("WorkManager", "Enqueue")
+
+
+//        val request2 = OneTimeWorkRequest.Builder(AppWorker::class.java)
+//            .build()
+//        val requestID2 = request2.id
+//        WorkManager.getInstance()?.enqueue(request2)
+//        Log.i("WorkManager", "RequestID 2: $requestID2")
+
     }
 
     private fun showFragment(savedInstanceState: Bundle?) {

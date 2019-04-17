@@ -36,9 +36,21 @@ class AppModule {
             .addCallback(object : RoomDatabase.Callback() {
                 override fun onCreate(db: SupportSQLiteDatabase) {
                     super.onCreate(db)
+                    /*val request =
+                      OneTimeWorkRequest.Builder(AppWorker::class.java) //.Builder(AppWorker::class.java) //<AppWorker>()
+                           .build()
+                   request.id
+                   val result = WorkManager.getInstance()?.enqueue(request)*/
                 }
             }).build()
     }
+//
+//    @Provides
+//    @Singleton
+//    internal fun provideUserDao(myDatabase: MyDatabase):UserDao {
+//
+//        return myDatabase.userDao()
+//    }
 
     @Provides
     @Singleton
